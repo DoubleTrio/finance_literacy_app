@@ -15,8 +15,18 @@ def index():
                 FinancialSubmodule("Taxes", "info", "path")
             ]
         ),
-        FinancialCategory("Saving and Investing", []),
-        FinancialCategory("Debt", []),
+        FinancialCategory("Saving and Investing", [
+                FinancialSubmodule("Budgeting", "info", "path"),
+                FinancialSubmodule("Banking", "info", "path"),
+                FinancialSubmodule("Investing", "info", "path"),
+                FinancialSubmodule("Retirement", "info", "path")
+            ]),
+        FinancialCategory("Debt", [
+                FinancialSubmodule("Credit Cards", "info", "path"),
+                FinancialSubmodule("Major Purchases", "info", "path"),
+                FinancialSubmodule("Debt Management", "info", "path"),
+                FinancialSubmodule("Student Loans", "info", "path"),
+            ]),
     ]
     return render_template('index.html', categories=categories)
 
