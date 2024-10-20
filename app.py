@@ -53,8 +53,7 @@ all_categories = AllCategories([
     FinancialCategory("Debt", [
         FinancialSubmodule("Credit Cards", "credit_cards"),
         FinancialSubmodule("Major Purchases", "major_purchases"),
-        FinancialSubmodule("Debt Management", "debt_management"),
-        FinancialSubmodule("Student Loans", "student_loans") 
+        FinancialSubmodule("Debt Management", "debt_management")
     ]),
 ])
 
