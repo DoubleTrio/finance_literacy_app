@@ -11411,10 +11411,12 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-color: #ffffff;
+    /* Note: Possibly breaking change lmao */
+  background: linear-gradient(144deg, rgba(238,219,233,1) 51%, rgba(78,98,196,1) 100%);
   color: #333;
   margin: 0;
   padding: 0;
+  background-repeat:no-repeat;
 }
 
 .navbar {
@@ -11522,3 +11524,18 @@ form button:hover {
   font-size: 16px;
   line-height: 1.5;
 }/*# sourceMappingURL=styles.css.map */
+
+/* 
+ * Added CSS
+ * */
+
+.floaty {
+    border-radius: 20px;
+    transform:translateY(0);
+}
+
+.floaty:hover{
+    transform: translateY(-10px);
+    transition: transform 0.2s ease;
+}
+
