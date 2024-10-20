@@ -2,12 +2,12 @@
 
 {% block body %}
 <div class="container">
-    <h1 class="my-4 text-center">InvestED</h1>
+    <h1 class="my-4 text-center title-font">InvestED</h1>
     <div class="row" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
     {% for category in categories %}
         {% set i = loop %}
-        <hr></hr>
-        <h2 id="sin-{{i.index}}">{{category.name}}</h2>
+        <hr class="hr-divider"/>
+        <h2 class="category" id="sin-{{i.index}}"><span>{{category.name}}</span></h2>
         {% for submodule in category.submodules %}     
             {% if submodule.completed == True %}
                 {% set btnstyle = 'btn-outline-primary' %}
