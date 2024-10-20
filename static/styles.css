@@ -11415,10 +11415,10 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
-  background-repeat:no-repeat;
 }
 .grad {
   background: linear-gradient(144deg, rgba(238,219,233,1) 51%, rgba(78,98,196,1) 100%);
+  background-repeat:no-repeat;
 }
 
 .navbar {
