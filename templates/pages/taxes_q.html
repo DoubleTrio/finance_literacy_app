@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container">
+    <h2>Quiz</h2>
+    
+    <!-- Question section -->
+    <div class="question">
+        <p><strong>Question:</strong> What is the capital of France?</p>
+    </div>
+
+    <!-- Answer options -->
+    <form action="/submit-answer" method="POST">
+        <div class="answers">
+            <label>
+                <input type="radio" name="answer" value="A">
+                A. Berlin
+            </label>
+            <label>
+                <input type="radio" name="answer" value="B">
+                B. Madrid
+            </label>
+            <label>
+                <input type="radio" name="answer" value="C">
+                C. Paris
+            </label>
+            <label>
+                <input type="radio" name="answer" value="D">
+                D. Rome
+            </label>
+        </div>
+
+        <input type="hidden" name="cAns" value="C">
+
+        <!-- Submit button -->
+        <div class="submit-btn">
+            <button type="submit">Submit Answer</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

@@ -27,9 +27,8 @@ valid_paths = {}
 for category in categories: 
     for submodule in category.submodules:
         valid_paths[submodule.path] = True
-valid_paths["career_planning_q"] = True
-valid_paths["submit-answer"] = True
-valid_paths["submit-answer-incorrect"] = True
+
+
 
 @app.route('/')
 def index():
@@ -37,10 +36,7 @@ def index():
 
 @app.route('/<string:Name>')
 def submodule(Name):
-    path_name = "404"
-    if Name in valid_paths: 
-        path_name = Name
-    return render_template(f"pages/{path_name}.html")
+    return render_template(f"pages/{Name}.html")
 
 @app.route('/submit-answer', methods=['POST'])
 def submit_answer():
