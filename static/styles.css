@@ -11417,7 +11417,7 @@ body {
   padding: 0;
 }
 .grad {
-  background: linear-gradient(144deg, rgba(238,219,233,1) 51%, rgba(78,98,196,1) 100%);
+  background: linear-gradient(144deg, rgba(255,240,251,1) 51%, rgba(78,98,196,1) 100%);
   background-repeat:no-repeat;
 }
 

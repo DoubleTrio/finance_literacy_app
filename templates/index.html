@@ -6,6 +6,7 @@
     <div class="row" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
     {% for category in categories %}
         {% set i = loop %}
+        <br></br>
         <hr class="hr-divider"/>
         <h2 class="category" id="sin-{{i.index}}"><span>{{category.name}}</span></h2>
         {% for submodule in category.submodules %}     
