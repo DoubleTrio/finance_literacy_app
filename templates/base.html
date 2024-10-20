@@ -11,7 +11,7 @@
 </head>
 
 
-{% if path_name != null %}
+{% if path_name != null or result_message != null %}
     {% set bodystyle = '' %}
 {% else %}  
     {% set bodystyle = 'grad' %}
