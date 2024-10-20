@@ -41,7 +41,7 @@ def submodule(Name):
 @app.route('/submit-answer', methods=['POST'])
 def submit_answer():
     selected_answer = request.form.get('answer')
-    correct_answer = request.form.get('cAns')
+    correct_answer = request.form.get('think')
 
     if selected_answer == correct_answer:
         result_message = "Correct!"
