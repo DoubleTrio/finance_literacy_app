@@ -3,20 +3,14 @@
 {% block body %}
 <div class="container">
     <h1 class="my-4 text-center">Website Title!</h1>
-    <!-- <form class="form-inline justify-content-center mb-4" method="get" action="/">
-        <input type="text" class="form-control mr-2" name="query" value="{{ query }}" placeholder="Search for news">
-        <button type="submit" class="btn btn-primary">Search</button>
-    </form> -->
-    <div class="row">
+    {% set c = 0 %}
+    <div class="row" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
         {% for category in categories %}
-        <div>
-            <h2>{{category.name}}</h2>
-            <ul>
-                {% for submodule in category.submodules %}      
-                    <button type="button" class="btn btn-primary">{{submodule.module_name}}</button>
-                {% endfor %}
-            </ul>
-        </div>
+        {% set i = loop %}
+        <h2 id="sin-{{i.index}}">{{category.name}}</h2>
+        {% for submodule in category.submodules %}      
+        <button id="sin-{{ loop.index + i.index }}" style="border-radius:15%;width:100px;" type="button" class="btn btn-primary">{{submodule.module_name}}</button>
+        {% endfor %}
         {% endfor %}
     </div>
 </div>
