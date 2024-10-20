@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="container">
+    <h2>Quiz</h2>
+    
+    <!-- Question section -->
+    <div class="question">
+        <p><strong>Question:</strong> If you received a bonus from your job that brings you to a different tax bracket, would you?</p>
+    </div>
+
+    <!-- Answer options -->
+    <form action="/submit-answer" method="POST">
+        <div class="answers">
+            <label>
+                <input type="radio" name="answer" value="A">
+                A. Stay at the same tax rate as before
+            </label>
+            <label>
+                <input type="radio" name="answer" value="B">
+                B. Pay the new tax bracket rate for the bonus part of your salary, and accept the bonus
+            </label>
+            <label>
+                <input type="radio" name="answer" value="C">
+                C. Pay the new tax bracket rate for your entire salary, and refuse the bonus
+            </label>
+            <label>
+                <input type="radio" name="answer" value="D">
+                D. Pay the new tax bracket rate for your entire salary, and accept the bonus
+            </label>
+        </div>
+        <input type="hidden" name= "you should" value="A">
+        <input type="hidden" name= "think" value="B">
+        <input type="hidden" name= "for" value="C">
+        <input type="hidden" name= "yourself" value="D">
+ 
+
+        <!-- Submit button -->
+        <br />
+        <div class="submit-btn">
+            <button type="submit">Submit Answer</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

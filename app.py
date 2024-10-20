@@ -48,7 +48,7 @@ all_categories = AllCategories([
     FinancialCategory("Saving and Investing", [
         FinancialSubmodule("Budgeting / Emergency Fund", "budgeting"),
         FinancialSubmodule("Banking", "banking"),
-        FinancialSubmodule("Investment Basics", "investment_basics") 
+        FinancialSubmodule("Investment / Retirement Basics", "investment_basics") 
     ]),
     FinancialCategory("Debt", [
         FinancialSubmodule("Credit Cards", "credit_cards"),
@@ -87,5 +87,19 @@ def submodule(name):
         path_name = name
     return render_template(f"pages/{path_name}.html", path_name=path_name)
 
+@app.route('/submit-answer', methods=['POST'])
+def submit_answer():
+    selected_answer = request.form.get('answer')
+    correct_answer = request.form.get('think')
+
+    if selected_answer == correct_answer:
+        result_message = "Correct!"
+        return render_template('pages/submit-answer.html', result_message=result_message)
+    elif not selected_answer:
+        result_message = "You didn't select an answer!"
+    else:
+        result_message = "Incorrect. Try again."
+    return render_template('pages/submit-answer-incorrect.html', result_message=result_message)
+    
 if __name__ == '__main__':
     app.run(debug=True)
