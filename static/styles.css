@@ -11541,3 +11541,45 @@ form button:hover {
     transition: transform 0.2s ease;
 }
 
+h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+  overflow: hidden;
+  text-align: center;
+}
+
+.submit-btn {
+  border-radius: 20px;
+}
+
+span:after,
+span:before{
+    content:"\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+    text-decoration: line-through;
+    padding: 0 20px;
+    /* content- */
+    /* font-family: monospace; */
+}
+
+.category {
+  /* border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 10px 0 20px; */
+}
+/* h2 span {
+  background: white;
+  padding: 0 10px;
+} */
+
+.title-font {
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.hr-divider {
+  border: none;
+  height: 1.8px;
+  color: #333;
+  background-color: #333;
+}
