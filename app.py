@@ -28,16 +28,30 @@ for category in categories:
     for submodule in category.submodules:
         valid_paths[submodule.path] = True
 
+
+
 @app.route('/')
 def index():
     return render_template('index.html', categories=categories)
 
 @app.route('/<string:Name>')
 def submodule(Name):
-    path_name = "404"
-    if Name in valid_paths: 
-        path_name = Name
-    return render_template(f"pages/{path_name}.html")
+    return render_template(f"pages/{Name}.html")
+
+@app.route('/submit-answer', methods=['POST'])
+def submit_answer():
+    selected_answer = request.form.get('answer')
+    correct_answer = request.form.get('cAns')
+
+    if selected_answer == correct_answer:
+        result_message = "Correct!"
+        return render_template('pages/submit-answer.html', result_message=result_message)
+    elif not selected_answer:
+        result_message = "You didn't select an answer!"
+    else:
+        result_message = "Incorrect. Try again."
+    return render_template('pages/submit-answer-incorrect.html', result_message=result_message)
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
