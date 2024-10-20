@@ -13,7 +13,7 @@ categories = [
     FinancialCategory("Saving and Investing", [
         FinancialSubmodule("Budgeting / Emergency Fund", "budgeting"),
         FinancialSubmodule("Banking", "banking"),
-        FinancialSubmodule("Investment Basics", "investment_basics") 
+        FinancialSubmodule("Investment / Retirement Basics", "investment_basics") 
     ]),
     FinancialCategory("Debt", [
         FinancialSubmodule("Credit Cards", "credit_cards"),
