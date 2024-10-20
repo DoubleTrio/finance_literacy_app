@@ -3,21 +3,18 @@
 {% block body %}
 <div class="container">
     <h1 class="my-4 text-center">Website Title!</h1>
-    <!-- <form class="form-inline justify-content-center mb-4" method="get" action="/">
-        <input type="text" class="form-control mr-2" name="query" value="{{ query }}" placeholder="Search for news">
-        <button type="submit" class="btn btn-primary">Search</button>
-
-            <li class="nav-item">
-                <a class="nav-link" href="/?query=US">US</a>
-            </li>
-    </form> -->
     <div class="column">
         {% for category in categories %}
         <div>
             <h2>{{category.name}}</h2>
             <ul>
                 {% for submodule in category.submodules %}     
-                    <a class="btn btn-primary" href="/{{ submodule.path }}" role="button">{{submodule.module_name}}</a>
+                {% if submodule.completed == True %}
+                    {% set btnstyle = 'btn-outline-primary' %}
+                {% else %}  
+                    {% set btnstyle = 'btn-primary' %}
+                {% endif %}
+                <a class="btn {{btnstyle}}" href="{{ url_for('submodule', name=submodule.path) }}" role="button">{{submodule.module_name}}</a>  
                 {% endfor %}
             </ul>
         </div>
