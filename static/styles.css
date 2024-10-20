@@ -11412,7 +11412,7 @@ textarea.form-control-lg {
 }
 body {
     /* Note: Possibly breaking change lmao */
-  background: linear-gradient(144deg, rgba(181,108,161,1) 14%, rgba(14,47,209,1) 100%);
+  background: linear-gradient(144deg, rgba(238,219,233,1) 51%, rgba(78,98,196,1) 100%);
   color: #333;
   margin: 0;
   padding: 0;
