@@ -9,7 +9,17 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     {% endblock %}
 </head>
-<body>
+
+
+{% if path_name != null or result_message != null %}
+    {% set bodystyle = '' %}
+{% else %}  
+    {% set bodystyle = 'grad' %}
+{% endif %} 
+
+<body class="{{bodystyle}}">
+
+
     <div class="container" id="page_container">
         {% block header %}
         {% endblock %}
