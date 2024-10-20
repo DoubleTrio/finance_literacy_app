@@ -81,11 +81,7 @@ def finished_submodule():
 
 @app.route('/submodules/<string:name>')
 def submodule(name):
-    path_name = "404"
-    
-    if name in valid_paths: 
-        path_name = name
-    return render_template(f"pages/{path_name}.html", path_name=path_name)
+    return render_template(f"pages/{name}.html", path_name=name)
 
 @app.route('/submit-answer', methods=['POST'])
 def submit_answer():
